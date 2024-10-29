@@ -1,0 +1,11 @@
+.title {
+    color: red;
+    background-color: antiquewhite;
+    text-align: center;
+    border: 9px black solid;
+    padding: 30px;
+    margin-bottom: 30px
+}
+#important {
+    color: blue;
+}
