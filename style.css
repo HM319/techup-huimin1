@@ -1,27 +1,13 @@
-/* h1 {
-    color: black;
-
-    text-align: center
-} */
-
 h1 {
     color:rgb(10, 5, 44);
     text-align: center;
 }
-
-/* h2 {
-    color: light blue;
-
-    text-align: center;
-
-    margin-bottom: 100px
-} */
  
 h2 {
     color:rgb(90, 72, 209);
     text-align: center;
     
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 body {
