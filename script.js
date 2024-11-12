@@ -12,34 +12,34 @@ let selectedMeal = '';  // To keep track of the selected meal
 const ingredients = {
     "chicken-yakiudon": {
         "Udon noodles": "2 packs",
-        "Chinese cabbage": "50g",
-        "Bean sprouts": "30g",
+        "Chinese cabbage": "50 g",
+        "Bean sprouts": "30 g",
         "Cloves garlic, minced": "2 cloves",
         "Chicken breast": "1 piece",
-        "Eggs": "2",
+        "Eggs": "2 whole",
         "Corn oil": "4 tsp",
         "Light soya sauce": "1 tsp",
         "Sweet soy sauce": "2 tbsp",
         "Sesame oil": "1 tsp"
     },
     "miso-sliced-fish-soup": {
-        "Fish fillet": "300g",
+        "Fish fillet": "300 g",
         "Egg tofu": "1 packet",
-        "Cabbage": "150g",
+        "Cabbage": "150 g",
         "Miso paste": "1 tbsp",
-        "Carrots": "3",
+        "Carrots": "3 sticks",
         "Celery": "3 stalks",
-        "Onions": "2",
+        "Onions": "2 whole",
         "Ginger": "3 slices"
     },
     "pear-celery-salad": {
-        "Celery": "160g",
-        "Williams pear": "160g",
-        "Orange": "100g",
-        "Dried prunes": "60g",
+        "Celery": "160 g",
+        "Williams pear": "160 g",
+        "Orange": "100 g",
+        "Dried prunes": "60 g",
         "Lemon juice": "2 tbsp",
-        "Yoghurt": "60g",
-        "Mustard sauce": "30g"
+        "Yoghurt": "60 g",
+        "Mustard sauce": "30 g"
     }
 };
 
@@ -71,7 +71,16 @@ generateButton.addEventListener('click', function() {
         // Loop through the ingredients and create list items
         for (const ingredient in mealIngredients) {
             const listItem = document.createElement('li');
-            listItem.textContent = `${ingredient}: ${mealIngredients[ingredient]}`;
+
+            // Split ingredient and quantity (in case there are multiple quantities like '2 packs' or '300g')
+            const [quantity, unit] = mealIngredients[ingredient].split(' ');
+
+            // Multiply the quantity by the number of selected days
+            const totalQuantity = (selectedDays > 1) ? (parseFloat(quantity) * selectedDays) + ' ' + unit : mealIngredients[ingredient];
+
+            // Set the text content of the list item
+            listItem.textContent = `${ingredient}: ${totalQuantity}`;
+
             groceryList.appendChild(listItem);
         }
 
