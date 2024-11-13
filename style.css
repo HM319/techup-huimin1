@@ -1,60 +1,151 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Font and Basic Body Style */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
+    text-align: center;
+    color: #333;
+}
+
+/* Banner Section */
 .banner {
-    width: 100%;
-    height: 300px; /* Adjust the height as needed */
-    overflow: hidden;
     position: relative;
+    width: 100%;
+    height: 350px; /* Adjust to suit your image */
+    overflow: hidden;
 }
 
 .banner-image {
-    width: 100%; /* Make the image stretch across the full width */
-    height: 100%; /* Ensure the image fills the container */
-    object-fit: cover; /* Maintain aspect ratio and cover the space */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay for better text visibility */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 h1 {
-    color:rgb(10, 5, 44);
-    text-align: center;
-    bottom margin: 40px
+    font-size: 3em;
+    margin-bottom: 10px;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    text-align: center;
+p {
+    font-size: 1.2em;
+    font-weight: 300;
 }
 
-h1, h2 {
-    text-align: center;
+/* Main Content Section */
+main {
+    padding: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
+/* Day Selection Box */
 .day-selection {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 20px;
     margin-bottom: 40px;
 }
 
 .day-box {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 2px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     background-color: white;
-    transition: background-color 0.3s ease;
-}
-
-.day-box.selected {
-    background-color: blue;
-    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .day-box:hover {
-    background-color: #f0f0f0;
+    background-color: #f1f1f1;
+    transform: translateY(-5px);
 }
 
+.day-box.selected {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Recipe Links */
+.recipe-links a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.recipe-links a:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+}
+
+/* Meal Select and Button */
+select, button {
+    margin: 20px 0;
+    padding: 12px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    width: 200px;
+    display: inline-block;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #ddd;
+}
