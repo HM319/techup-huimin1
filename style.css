@@ -140,7 +140,8 @@ select, button {
     border-radius: 5px;
     border: 1px solid #ccc;
     background-color: #fff;
-    width: 200px;
+    width: auto;  /* Allow the width to expand based on the content */
+    min-width: 200px;  /* Ensure a minimum width in case the content is too small */
     display: inline-block;
 }
 
