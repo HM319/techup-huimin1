@@ -156,6 +156,17 @@ button:hover:not(:disabled) {
     cursor: pointer;
 }
 
+#grocery-list ul {
+    list-style-type: none; /* Removes bullet points */
+    padding-left: 0; /* Removes left padding */
+    margin: 0; /* Optional: removes any default margin */
+}
+
+#grocery-list li {
+    text-align: middle; /* Align the text of each list item */
+    padding: 5px 0; /* Optional: adds spacing between items */
+}
+
 /* Footer */
 footer {
     background-color: #007BFF;
