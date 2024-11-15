@@ -11,35 +11,35 @@ let selectedMeal = '';  // To keep track of the selected meal
 // Ingredient lists for each recipe
 const ingredients = {
     "chicken-yakiudon": {
-        "Udon noodles": "2 packs",
+        "Udon noodles": "1 pack",
         "Chinese cabbage": "50 g",
         "Bean sprouts": "30 g",
         "Cloves garlic, minced": "2 cloves",
         "Chicken breast": "1 piece",
-        "Eggs": "2 whole",
-        "Corn oil": "4 tsp",
+        "Eggs": "1 whole",
+        "Corn oil": "2 tsp",
         "Light soya sauce": "1 tsp",
-        "Sweet soy sauce": "2 tbsp",
+        "Sweet soy sauce": "1 tbsp",
         "Sesame oil": "1 tsp"
     },
     "miso-sliced-fish-soup": {
-        "Fish fillet": "300 g",
+        "Fish fillet": "100 g",
         "Egg tofu": "1 packet",
-        "Cabbage": "150 g",
+        "Cabbage": "100 g",
         "Miso paste": "1 tbsp",
-        "Carrots": "3 sticks",
-        "Celery": "3 stalks",
+        "Carrots": "1 sticks",
+        "Celery": "1 stalks",
         "Onions": "2 whole",
         "Ginger": "3 slices"
     },
     "pear-celery-salad": {
-        "Celery": "160 g",
-        "Williams pear": "160 g",
-        "Orange": "100 g",
+        "Celery": "1 stick",
+        "Williams pear": "1 whole",
+        "Orange": "1 whole",
         "Dried prunes": "60 g",
-        "Lemon juice": "2 tbsp",
+        "Lemon juice": "1 tbsp",
         "Yoghurt": "60 g",
-        "Mustard sauce": "30 g"
+        "Mustard sauce": "1 tbsp"
     }
 };
 
