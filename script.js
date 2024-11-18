@@ -40,6 +40,14 @@ const ingredients = {
         "Lemon juice": "1 tbsp",
         "Yoghurt": "60 g",
         "Mustard sauce": "1 tbsp"
+    },
+    "brown-rice-congee": {
+        "Brown Rice": "40 g",
+        "Ginger": "1 slice",
+        "Chicken thigh": "1 whole",
+        "Carrots": "50 g",
+        "Mushrooms": "20 g",
+        "Sesame oil": "1 tsp",
     }
 };
 
@@ -73,6 +81,9 @@ cuisineFilter.addEventListener('change', function() {
             item.classList.remove('hidden');
         } else if (selectedCuisine === 'japanese' && recipeType === 'japanese') {
             // Show only Japanese recipes
+            item.classList.remove('hidden');
+        } else if (selectedCuisine === 'chinese' && recipeType === 'chinese') {
+            // Show only Chinese recipes
             item.classList.remove('hidden');
         } else {
             // Hide recipes that don't match the selected filter
