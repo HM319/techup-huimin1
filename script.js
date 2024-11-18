@@ -42,12 +42,30 @@ const ingredients = {
         "Mustard sauce": "1 tbsp"
     },
     "brown-rice-congee": {
-        "Brown Rice": "40 g",
+        "Brown Rice": "0.5 cup",
         "Ginger": "1 slice",
         "Chicken thigh": "1 whole",
         "Carrots": "50 g",
         "Mushrooms": "20 g",
         "Sesame oil": "1 tsp",
+    },
+    "fried-olive-rice": {
+        "Garlic": "1 clove",
+        "Olives": "3 whole",
+        "Long beans": "50 g",
+        "Brown rice": "0.5 cup",
+        "Cashew nuts": "0.5 tbsp",
+        "Olive oil": "0.5 tbsp",
+        "Chili (optional)": "1 whole"
+    },
+    "prosperity-noodles": {
+        "Garlic": "1 clove",
+        "Yellow flat noodles": "100 g",
+        "Chinese cabbage": "20 g",
+        "Chye sim": "20 g",
+        "Abalone sauce": "0.5 tbsp",
+        "Rice bran oil": "0.5 tbsp",
+        "Sesame oil": "0.5 tbsp"
     }
 };
 
