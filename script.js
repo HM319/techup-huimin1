@@ -53,6 +53,34 @@ dayBoxes.forEach(box => {
     });
 });
 
+// Get references to the filter dropdown and recipe items
+const cuisineFilter = document.getElementById('cuisine-filter');
+const recipeItems = document.querySelectorAll('.recipe-item');
+
+// Event listener for the filter dropdown (Type of Cuisine)
+cuisineFilter.addEventListener('change', function() {
+    const selectedCuisine = cuisineFilter.value;
+
+    recipeItems.forEach(item => {
+        // Get the data-type attribute of the recipe
+        const recipeType = item.getAttribute('data-type');
+
+        if (selectedCuisine === 'all') {
+            // Show all recipes if 'All' is selected
+            item.classList.remove('hidden');
+        } else if (selectedCuisine === 'vegetarian' && recipeType === 'vegetarian') {
+            // Show only vegetarian recipes
+            item.classList.remove('hidden');
+        } else if (selectedCuisine === 'japanese' && recipeType === 'japanese') {
+            // Show only Japanese recipes
+            item.classList.remove('hidden');
+        } else {
+            // Hide recipes that don't match the selected filter
+            item.classList.add('hidden');
+        }
+    });
+});
+
 // Event listener for meal selection
 mealSelect.addEventListener('change', function() {
     selectedMeal = mealSelect.value;  // Get the selected meal

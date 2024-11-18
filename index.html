@@ -45,21 +45,32 @@
             <section class="recipes">
                 <h2>Step 2: Browse our easy recipe options</h2>
                 <br>
+                <!-- Update filter to a dropdown (Type of Cuisine) -->
+<label for="cuisine-filter">Type of Cuisine:</label>
+<select id="cuisine-filter">
+    <option value="all">All</option>
+    <option value="japanese">Japanese</option>
+    <option value="vegetarian">Vegetarian</option>
+</select>
+
                 <div class="recipe-links">
-                    <div class="recipe-item">
-                        <img src="images/HPB chicken udon.png" alt="Chicken Yakiudon" class="recipe-image">
-                        <a href="https://ch-api.healthhub.sg/api/public/content/06ab7c7693144203844b3bb2229676a9?v=926df92f&_gl=1*7klcrp*_gcl_au*MTEwOTczODc5Ny4xNzMxMjkyODIw*_ga*MTkwMjE4ODIyNS4xNzMxMjkyODIw*_ga_VQW1KL2RMR*MTczMTI5MjgxOS4xLjEuMTczMTI5MjkxMi42MC4wLjA" target="_blank">Chicken Yakiudon</a>
-                    </div>
-                    <div class="recipe-item">
-                        <img src="images/HPB miso fish.png" alt="Miso Sliced Fish Soup" class="recipe-image">
-                        <a href="https://ch-api.healthhub.sg/api/public/content/0240451db3e94baab9005ca904edf116?v=2c9b5616&_gl=1*rtrutj*_gcl_au*MTEwOTczODc5Ny4xNzMxMjkyODIw*_ga*MTkwMjE4ODIyNS4xNzMxMjkyODIw*_ga_VQW1KL2RMR*MTczMTI5MjgxOS4xLjEuMTczMTI5MjkxMi42MC4wLjA" target="_blank">Miso Sliced Fish Soup</a>
-                    </div>
-                    <div class="recipe-item">
-                        <img src="images/HBP salad.png" alt="Pear, Celery and Dried Prune Salad" class="recipe-image">
-                        <a href="https://ch-api.healthhub.sg/api/public/content/7453468e1aba456bbf7ba782852ce05b?v=c526c871&_gl=1*18tat3t*_gcl_au*MTEwOTczODc5Ny4xNzMxMjkyODIw*_ga*MTkwMjE4ODIyNS4xNzMxMjkyODIw*_ga_VQW1KL2RMR*MTczMTI5MjgxOS4xLjEuMTczMTI5MjkxMi42MC4wLjA" target="_blank">Pear, Celery and Prune Salad</a>
-                    </div>
-                </div>
-                <br><br>
+    <!-- Recipe 1 (Non-Vegetarian / Japanese) -->
+    <div class="recipe-item" data-type="japanese">
+        <img src="images/HPB chicken udon.png" alt="Chicken Yakiudon" class="recipe-image">
+        <a href="https://ch-api.healthhub.sg/api/public/content/06ab7c7693144203844b3bb2229676a9?v=926df92f&_gl=1*7klcrp*_gcl_au*MTEwOTczODc5Ny4xNzMxMjkyODIw*_ga*MTkwMjE4ODIyNS4xNzMxMjkyODIw*_ga_VQW1KL2RMR*MTczMTI5MjgxOS4xLjEuMTczMTI5MjkxMi42MC4wLjA" target="_blank">Chicken Yakiudon</a>
+    </div>
+    <!-- Recipe 2 (Non-Vegetarian / Japanese) -->
+    <div class="recipe-item" data-type="japanese">
+        <img src="images/HPB miso fish.png" alt="Miso Sliced Fish Soup" class="recipe-image">
+        <a href="https://ch-api.healthhub.sg/api/public/content/0240451db3e94baab9005ca904edf116?v=2c9b5616&_gl=1*rtrutj*_gcl_au*MTEwOTczODc5Ny4xNzMxMjkyODIw*_ga*MTkwMjE4ODIyNS4xNzMxMjkyODIw*_ga_VQW1KL2RMR*MTczMTI5MjgxOS4xLjEuMTczMTI5MjkxMi42MC4wLjA" target="_blank">Miso Sliced Fish Soup</a>
+    </div>
+    <!-- Recipe 3 (Vegetarian) -->
+    <div class="recipe-item" data-type="vegetarian">
+        <img src="images/HBP salad.png" alt="Pear, Celery and Dried Prune Salad" class="recipe-image">
+        <a href="https://ch-api.healthhub.sg/api/public/content/7453468e1aba456bbf7ba782852ce05b?v=c526c871&_gl=1*18tat3t*_gcl_au*MTEwOTczODc5Ny4xNzMxMjkyODIw*_ga*MTkwMjE4ODIyNS4xNzMxMjkyODIw*_ga_VQW1KL2RMR*MTczMTI5MjgxOS4xLjEuMTczMTI5MjkxMi42MC4wLjA" target="_blank">Pear, Celery and Prune Salad</a>
+    </div>
+</div>
+<br><br>
             </section>
             
             
