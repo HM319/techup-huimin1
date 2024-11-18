@@ -117,27 +117,34 @@ label {
 
 /* Recipe Links */
 .recipe-links {
-    display: flex;  /* Use flexbox for layout */
-    justify-content: space-between;  /* Spread items evenly across the container */
-    gap: 20px;  /* Space between items */
-    flex-wrap: wrap;  /* Allow wrapping on smaller screens */
-    margin-top: 20px;
+    display: flex;            /* Use Flexbox for the layout */
+    justify-content: center;  /* Center the items horizontally */
+    align-items: flex-start;  /* Align items at the top */
+    gap: 20px;                /* Space between items */
+    flex-wrap: wrap;          /* Allow the items to wrap on smaller screens */
+    margin-top: 20px;         /* Space from the filter dropdown */
+    margin-bottom: 30px;      /* Space at the bottom */
+    padding: 0 10px;          /* Add some padding on the left and right */
 }
 
+/* Recipe Item */
 .recipe-item {
     text-align: center;
-    width: 30%;  /* Control the width of each item */
-    min-width: 200px;  /* Minimum width to ensure the layout works well */
-    margin-bottom: 20px;  /* Space below each item */
+    width: 30%;                /* Default width of each item */
+    min-width: 250px;          /* Minimum width for each item */
+    max-width: 350px;          /* Maximum width for each item */
+    margin-bottom: 20px;       /* Space below each item */
 }
 
+/* Recipe Image */
 .recipe-image {
-    width: 100%;  /* Make image fill the available width */
-    height: auto;  /* Maintain the aspect ratio of the image */
-    border-radius: 8px;  /* Optional: add rounded corners to images */
-    margin-bottom: 10px;  /* Space between image and the link */
+    width: 100%;               /* Make image fill the available width */
+    height: auto;              /* Maintain aspect ratio */
+    border-radius: 8px;        /* Optional: add rounded corners */
+    margin-bottom: 10px;       /* Space between image and link */
 }
 
+/* Recipe Link */
 .recipe-links a {
     display: inline-block;
     padding: 10px 20px;
@@ -152,6 +159,25 @@ label {
     background-color: #0056b3;
     transform: translateY(-5px);
 }
+
+/* Hide recipes initially */
+.hidden {
+    display: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .recipe-item {
+        width: 45%;  /* Two items per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .recipe-item {
+        width: 100%;  /* Stack all items in a single column on very small screens */
+    }
+}
+
 
 
 /* Meal Select and Button */
