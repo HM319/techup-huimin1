@@ -93,6 +93,11 @@ main {
     color: white;
 }
 
+.add-to-grocery-list.selected {
+    background-color: #4CAF50;
+    color: white; 
+}
+
 /* Hide elements with this class */
 .hidden {
     display: none;
