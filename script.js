@@ -141,8 +141,33 @@ generateButton.addEventListener('click', function() {
             groceryList.appendChild(listItem);
         }
 
-        // Clear any previous content and add the new list
-        groceryListDiv.innerHTML = '';  // Clear previous grocery list
-        groceryListDiv.appendChild(groceryList);  // Append the new grocery list
+        // Clear any previous content and add the new grocery list
+        groceryListDiv.innerHTML = '';  // Clear previous content
+        groceryListDiv.appendChild(groceryList);  // Add new list
+
+    } else {
+        groceryListDiv.innerHTML = '<p>Please select a meal to generate the grocery list.</p>';
     }
+});
+
+// Add event listeners for the 'Add to Grocery List' buttons
+const addToGroceryListButtons = document.querySelectorAll('.add-to-grocery-list');
+addToGroceryListButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        // Get the recipe name from the closest recipe-item
+        const recipeName = this.closest('.recipe-item').querySelector('a').textContent.trim().toLowerCase().replace(/ /g, '-');
+        
+        // Find the option corresponding to the recipe name
+        const option = Array.from(mealSelect.options).find(option => option.textContent.toLowerCase().replace(/ /g, '-') === recipeName);
+        
+        if (option) {
+            mealSelect.value = option.value; // Set the value of the dropdown
+        }
+
+        // Update selectedMeal based on the selected option in the dropdown
+        selectedMeal = mealSelect.value;
+
+        // Enable the "Generate Grocery List" button
+        generateButton.disabled = selectedDays === 0 || !selectedMeal;
+    });
 });
