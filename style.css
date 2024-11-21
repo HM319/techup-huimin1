@@ -84,7 +84,8 @@ main {
 }
 
 .day-box:hover {
-    background-color: #f1f1f1;
+    background-color: #4CAF50;
+    color: white
 }
 
 .day-box.selected {
