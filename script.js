@@ -154,20 +154,33 @@ generateButton.addEventListener('click', function() {
 const addToGroceryListButtons = document.querySelectorAll('.add-to-grocery-list');
 addToGroceryListButtons.forEach(button => {
     button.addEventListener('click', function() {
-        // Get the recipe name from the closest recipe-item
         const recipeName = this.closest('.recipe-item').querySelector('a').textContent.trim().toLowerCase().replace(/ /g, '-');
-        
-        // Find the option corresponding to the recipe name
         const option = Array.from(mealSelect.options).find(option => option.textContent.toLowerCase().replace(/ /g, '-') === recipeName);
         
-        if (option) {
-            mealSelect.value = option.value; // Set the value of the dropdown
+        if (selectedMeal !== recipeName) {
+            // Reset previously selected button to default state
+            const selectedButton = document.querySelector('.add-to-grocery-list.selected');
+            if (selectedButton) {
+                selectedButton.classList.remove('selected');
+                selectedButton.textContent = "Add to Grocery List";
+                selectedButton.style.backgroundColor = '';  // Reset background color
+            }
+
+            // Update the button for the new selection
+            this.classList.add('selected');
+            this.textContent = "Added";
+            this.style.backgroundColor = '#4CAF50';  // Change the button color to green
+            selectedMeal = recipeName;  // Update selected meal
+            mealSelect.value = option.value;  // Set the dropdown value
+        } else {
+            // Deselect the button if it's already selected
+            this.classList.remove('selected');
+            this.textContent = "Add to Grocery List";
+            this.style.backgroundColor = '';  // Reset background color
+            selectedMeal = '';  // Clear selected meal
+            mealSelect.value = '';  // Clear the dropdown value
         }
 
-        // Update selectedMeal based on the selected option in the dropdown
-        selectedMeal = mealSelect.value;
-
-        // Enable the "Generate Grocery List" button
-        generateButton.disabled = selectedDays === 0 || !selectedMeal;
+        generateButton.disabled = selectedDays === 0 || !selectedMeal;  // Enable the generate button
     });
 });
